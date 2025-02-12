@@ -21,7 +21,7 @@ const Producto = require('./models/Productos');
 const passport = require('passport') //para autenticar
 const LocalStragegy = require ('passport-local').Strategy // para que sea estrategia local ( no externa, ej: facebook, google)
 const sesion = require('express-session') //para cookies y manejo de sesiones
-const bcrypt = require('bcrypt') //para encriptar contraseñas
+const bcrypt = require('bcryptjs') //para encriptar contraseñas
 const flash = require('connect-flash')
 //////////////////////////////////////////
 
