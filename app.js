@@ -31,8 +31,6 @@ var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {
 const app = express();
 const PORT = process.env.PORT || 3000; // Corrección: Agregar un puerto por defecto
 
-
-
 //conexion a la bbdd
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`)))
