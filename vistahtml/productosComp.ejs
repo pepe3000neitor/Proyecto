@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./parciales/head.ejs') %>
+    <title><%= title %></title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AQbW4S-6ffGrrFG4f06ISh7artNZnv7_8N819GlPKU9or6Q28aOOoUE_wgjGuMrfJTJq9gTYVCm1MGV3&currency=EUR"></script>
+</head>
+<body>
+    <%- include ('./parciales/navegar.ejs') %>  
+
+    <div class="container py-5">
+        <h1 class="text-center mb-4"><%= title %></h1>
+        <div class="row">
+            <% productos.forEach((producto, index) => { %>
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <img src="<%= producto.imagenUrl %>" class="card-img-top" alt="<%= producto.nombre %>">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><%= producto.nombre %></h5>
+                        <p class="card-text text-center"><%= producto.descripcion %></p>
+                        <p class="card-text text-center fw-bold">Precio: €<%= producto.precio.toFixed(2) %></p>
+                        <!-- boton de paypal 
+                        <div id="paypal-button-container-<%= index %>"></div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            <% productos.forEach((producto, index) => { %>
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: '<%= producto.precio.toFixed(2) %>'
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            window.location.href = "/success?token=" + data.orderID;
+                        });
+                    }
+                }).render('#paypal-button-container-<%= index %>'); // Renderiza el botón con ID único
+            <% }); %>
+        });
+    </script>
+
+    <%- include ('./parciales/footer.ejs') %>
+</body>
+</html>      -->

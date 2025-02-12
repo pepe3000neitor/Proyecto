@@ -1,0 +1,622 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Wet+Paint&family=Tiny5&family=Updock&display=swap');
+        body{
+          font-family: "Playfair Display", serif;
+          font-optical-sizing: auto;
+          font-weight: weight;
+          font-style: normal;
+        }
+       
+        p, h1, h2, h3, a, ul{
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          color: #222;
+        }
+   
+        /* nav & footer styles */
+        nav{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 60px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #ddd;
+          text-transform: uppercase;
+        }
+        nav ul{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+        nav li{
+          list-style-type: none;
+          margin-left: 20px;
+        }
+        nav h1{
+          font-size: 3em;
+        }
+        nav p, nav a{
+          color: #777;
+          font-weight: 300;
+        }
+        footer{
+          color: #777;
+          text-align: center;
+          margin: 80px auto 20px;
+        }
+        h2{
+          margin-bottom: 40px;
+        }
+        h3{
+          text-transform: capitalize;
+          margin-bottom: 8px;
+        }
+        .content{
+          margin-left: 20px;
+        }
+   
+        /* images styles */
+        img[alt="imagen2"]{
+          display: block;
+          margin: auto;
+          margin-top: 10px;
+          width: auto;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(1,1,1,1.5);
+        }
+        img{
+          display: block;
+          margin: auto;
+          margin-top: 10px;
+          width: 500px;
+          height: 500px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(1,1,1,1.5);
+        }
+
+        /* Estilos específicos para las imágenes de los blogs */
+        .blog-header {
+          display: flex;
+          align-items: center; /* Alinea verticalmente la imagen con el título */
+          gap: 10px; /* Espacio entre la imagen y el título */
+          margin-bottom: 5px; /* Espacio debajo del contenedor del título e imagen */
+          margin-top: 10px; /* Espacio arriba del contenedor del título e imagen */
+          justify-content: flex-start; /* Alinea el contenido a la izquierda */
+        }
+       
+        /* Estilo específico para la imagen del blog */
+        .blog-image {
+          width: 20px; /* Tamaño ajustado de la imagen */
+          height: 20px;
+          border-radius: 50%; /* Imagen circular */
+          object-fit: cover; /* Ajusta la imagen dentro del contenedor circular */
+          margin: 0; /* Elimina cualquier margen extra */
+        }
+       
+        #toggle-password {
+          cursor: pointer;
+        }
+       
+       
+        /* details styles */
+        .btn-delete {
+          background-color: #e63946; /* Color rojo */
+          color: white;             /* Texto en blanco */
+          cursor: pointer;
+      }
+     
+      .btn-delete:hover {
+          background-color: #d62828; /* Más oscuro al pasar el cursor */
+      }
+     
+      .btn-delete:active {
+          background-color: #a4161a; /* Aún más oscuro al hacer clic */
+      }
+        /* estilo para crear blogs */
+        .create-blog form{
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        .create-blog input,
+        .create-blog textarea{
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+          padding: 8px;
+        }
+        .create-blog label{
+          display: block;
+          margin-top: 24px;
+        }
+        textarea{
+          height: 120px;
+        }
+        .create-blog button{
+          margin-top: 20px;
+          background: crimson;
+          color: white;
+          padding: 6px;
+          border: 0;
+          font-size: 1.2em;
+          cursor: pointer;
+        }
+
+        .create-blog form{
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        /*estilo para cuando nos redirige a la pagina de editar blog */
+        .edit-blog input,
+        .edit-blog textarea{
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+          padding: 8px;
+        }
+        .edit-blog label{
+          display: block;
+          margin-top: 24px;
+        }
+        textarea{
+          height: 120px;
+        }
+        .edit-blog button{
+          margin-top: 20px;
+          background: crimson;
+          color: white;
+          padding: 6px;
+          border: 0;
+          font-size: 1.2em;
+          cursor: pointer;
+        }
+        /* boton de editar blog */
+        .edit-button {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 2px 4px;
+          background-color:crimson;
+          color: white;
+          text-decoration: underline;
+          border-radius: 4px;
+          font-size: 0.6em;
+      }
+     
+      .edit-button:hover {
+          background-color: rgb(175, 7, 41);
+      }
+
+      /*boton para paginar */
+      .pagination {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+   
+    .pagination-button {
+        padding: 8px 12px;
+        background-color: #ff0000;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 4px;
+    }
+   
+    .pagination-button:hover {
+        background-color: #890000;
+    }
+
+/*estilos para las creaciones de usuarios, etc...*/
+/* Estilo general para las páginas de login y sign-up */
+.login-form,
+.sign-up-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h1,
+.sign-up-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: crimson;
+}
+
+.login-form label,
+.sign-up-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input,
+.sign-up-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button,
+.sign-up-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.login-form button:hover,
+.sign-up-form button:hover {
+    background-color: #a4161a;
+}
+
+/* Botón de logout */
+.logout-button {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-button:hover {
+  background-color: #a4161a;
+}
+
+/* Tabla de datos */
+.basededatos-table, .actividad-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.basededatos-table th,
+.basededatos-table td,
+.actividad-table th,
+.actividad-table td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.basededatos-table th,
+.actividad-table th {
+  background-color: crimson;
+  color: white;
+  font-weight: bold;
+}
+
+.basededatos-table tr:nth-child(even),
+.actividad-table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+/* Encabezado de la página de base de datos */
+.basededatos-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: crimson;
+}
+
+.basededatos-header h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Botón de cerrar sesión dentro de la página de base de datos */
+.basededatos-logout {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.basededatos-logout a {
+  text-decoration: none;
+  color: white;
+  background-color: crimson;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.basededatos-logout a:hover {
+  background-color: #a4161a;
+}
+
+
+/* Botón para redirigir a crear cuenta */
+.create-account-button {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px 15px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  width: 150px;
+}
+
+.create-account-button:hover {
+  background-color: crimson;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Estilos para las tarjetas de productos */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+/* Estilos para los botones de PayPal */
+#paypal-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Estilos para las filas y columnas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Asegurar que las tarjetas tengan el mismo tamaño */
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Estilos para el título de la página */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Ícono de la cesta */
+.cart-icon {
+  position: fixed; /* Fijarlo en la esquina */
+  top: 20px;       /* Separación desde arriba */
+  right: 20px;     /* Separación desde la derecha */
+  z-index: 1000;   /* Asegurar que quede encima de otros elementos */
+  width: 60px;     /* Tamaño máximo del contenedor */
+  height: 60px;    /* Tamaño máximo del contenedor */
+  display: flex;   /* Para centrar la imagen */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f0f0f0; /* Fondo gris claro */
+  border-radius: 50%;        /* Forma circular */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.cart-icon img {
+  width: 50%;      /* Tamaño relativo al contenedor */
+  height: auto;    /* Mantener proporción */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;        /* Coloca el contador encima del icono */
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+}
+
+
+
+/* Estilo para las tarjetas de productos */
+.card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Botones de cantidad y añadir */
+.input-group {
+  justify-content: center;
+}
+
+.input-group input {
+  max-width: 60px;
+  text-align: center;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Alineación de filas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.col-md-4 {
+  max-width: 300px;
+  flex: 1;
+  margin: 10px;
+}
+
+/*vista de cesta*/
+.table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cart-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart-summary p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.btn-warning, .btn-success {
+  margin-left: 10px;
+}

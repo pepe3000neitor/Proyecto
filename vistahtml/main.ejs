@@ -1,0 +1,23 @@
+<html lang="es">
+  <%- include ('./parciales/head.ejs') %>
+  <body>
+    <%- include ('./parciales/navegar.ejs') %>
+    <div class="blogs content">
+      <h2>Todos los usuarios</h2>
+      <% if (user.length > 0) { %>
+        <% user.forEach(user => { %>
+          <a class="single" href="/users/<%= user._id %>">
+            <% if (user.imagePath) { %> <!-- Corrected from blogs.imagePath to blog.imagePath -->
+              <img src="<%= user.imagePath %>" alt="imagen del blog" class="blog-image">
+            <% } %>
+            <h3 class="title"> <%= user.title %> </h3>
+            <p class="snippet"> <%= user.snippet %> </p>
+          </a>
+        <% }) %>
+      <% } else { %>
+        <p>No hay usuarios que mostrar</p>
+      <% } %>
+    </div>
+    <%- include ('./parciales/footer.ejs') %>
+  </body>
+</html>
